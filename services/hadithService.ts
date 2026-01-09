@@ -30,7 +30,9 @@ export const fetchHadithList = async (collection: string): Promise<Hadith[]> => 
         englishText: h.text || "No translation available",
         grading: (h.grades?.[0]?.grade as HadithGrading) || 'Sahih',
         gradedBy: h.grades?.[0]?.name || 'Scholarship',
-        chapterTitle: h.reference?.book || 'Chapter'
+        chapterTitle: h.reference?.book || 'Chapter',
+        // Fallback isnad as the Arabic text often starts with the chain
+        isnad: arabicEntry.text ? arabicEntry.text.split(' ').slice(0, 15).join(' ') + '...' : undefined
       };
     });
   } catch (error) {

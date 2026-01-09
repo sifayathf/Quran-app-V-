@@ -33,13 +33,15 @@ export interface Hadith {
   chapterTitle?: string;
 }
 
-export type CollectionCategory = 'Primary' | 'Fiqh' | 'Grading' | 'Moral';
+export type CollectionCategory = 'Primary' | 'Grading' | 'Rijal' | 'Fiqh';
+export type AIEngine = 'gemini' | 'local';
 
 export interface CollectionMetadata {
   id: string;
   name: string;
+  author?: string;
   description: string;
-  totalHadiths: number;
+  totalHadiths?: number | string;
   category: CollectionCategory;
   colorTheme: 'emerald' | 'amber' | 'indigo' | 'cyan' | 'rose' | 'violet';
 }
@@ -48,9 +50,9 @@ export interface ResourceLink {
   title: string;
   url: string;
   category: string;
+  description: string;
 }
 
-export type ArabicFontStyle = 'majeedi' | 'naskh' | 'amiri';
 export type TranslationLang = 'en' | 'ta';
 
 export enum AppView {
@@ -59,8 +61,8 @@ export enum AppView {
   SURAH_DETAIL = 'surah_detail',
   HADITH_COLLECTIONS = 'hadith_collections',
   HADITH_LIST = 'hadith_list',
+  RESEARCH_HUB = 'research_hub',
   SEARCH = 'search',
   ISNAD_ANALYZER = 'isnad_analyzer',
-  BOOKS_EXPLORER = 'books_explorer',
   RESOURCES = 'resources'
 }
