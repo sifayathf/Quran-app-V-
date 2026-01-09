@@ -33,7 +33,7 @@ export interface Hadith {
   chapterTitle?: string;
 }
 
-export type CollectionCategory = 'Primary' | 'Grading' | 'Rijal' | 'Fiqh';
+export type CollectionCategory = 'Primary' | 'Grading' | 'Rijal' | 'Fiqh' | 'Bulugh';
 export type AIEngine = 'gemini' | 'local';
 
 export interface CollectionMetadata {
@@ -44,6 +44,7 @@ export interface CollectionMetadata {
   totalHadiths?: number | string;
   category: CollectionCategory;
   colorTheme: 'emerald' | 'amber' | 'indigo' | 'cyan' | 'rose' | 'violet';
+  pdfUrl?: string;
 }
 
 export interface ResourceLink {
@@ -64,5 +65,6 @@ export enum AppView {
   RESEARCH_HUB = 'research_hub',
   SEARCH = 'search',
   ISNAD_ANALYZER = 'isnad_analyzer',
-  RESOURCES = 'resources'
+  RESOURCES = 'resources',
+  PDF_VIEWER = 'pdf_viewer'
 }

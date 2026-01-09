@@ -43,6 +43,13 @@ export const Icons = {
       </svg>
     </div>
   ),
+  Bulugh: () => (
+    <div className={`w-12 h-12 bg-gradient-to-br from-rose-500 to-orange-600 rounded-2xl flex items-center justify-center text-white shadow-lg`}>
+      <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+      </svg>
+    </div>
+  ),
   Library: () => (
     <div className={`w-12 h-12 bg-gradient-to-br ${COLORS.violet.grad} rounded-2xl flex items-center justify-center text-white shadow-lg`}>
       <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -57,7 +64,7 @@ export const Icons = {
   ),
   AI: () => (
     <div className={`w-8 h-8 bg-gradient-to-br from-violet-400 to-indigo-600 rounded-lg flex items-center justify-center text-white shadow-sm`}>
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     </div>
