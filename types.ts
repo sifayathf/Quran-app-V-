@@ -41,7 +41,13 @@ export interface CollectionMetadata {
   description: string;
   totalHadiths: number;
   category: CollectionCategory;
-  colorTheme: string;
+  colorTheme: 'emerald' | 'amber' | 'indigo' | 'cyan' | 'rose' | 'violet';
+}
+
+export interface ResourceLink {
+  title: string;
+  url: string;
+  category: string;
 }
 
 export type ArabicFontStyle = 'majeedi' | 'naskh' | 'amiri';
@@ -55,5 +61,6 @@ export enum AppView {
   HADITH_LIST = 'hadith_list',
   SEARCH = 'search',
   ISNAD_ANALYZER = 'isnad_analyzer',
-  BOOKS_EXPLORER = 'books_explorer'
+  BOOKS_EXPLORER = 'books_explorer',
+  RESOURCES = 'resources'
 }
